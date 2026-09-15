@@ -1,25 +1,67 @@
 @use "../utiles/index" as *;
 
 .button {
-  width: min(100%, 480px);
   position: relative;
+  top: 0;
   left: 0;
-  right: 0;
-  padding-block: 1rem;
-  display: flex;
-  justify-content: center;
+  z-index: 2;
+
+  min-width: fit-content;
+  display: inline-flex;
   align-items: center;
-  color: #2b9ee7;
+  justify-content: center;
+  text-align: center;
 
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 150%;
-
-  border-radius: 20px;
-  border: 2px solid #6cafd9;
-  background: #c9e4ea;
-  transition: $transition-duraction;
+  border: 2px solid $bg-color-yellow;
+  outline: none;
   cursor: pointer;
-  z-index: 1;
-  overflow: hidden;
+  border-radius: $radius;
+  padding: 0.875rem;
+  transition-duration: $transition-duraction;
+  color: $text-color-dark;
+  background-color: $bg-color-yellow;
+  font-size: inherit;
+
+  &::after,
+  &::before {
+    content: "";
+  }
+}
+.waves {
+  &__blobs {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -3px;
+    right: -1px;
+    z-index: -1;
+  }
+  &__blobs span {
+    background-color: $text-color-olive;
+    width: 34%;
+    height: 110%;
+    border-radius: 100%;
+    position: absolute;
+    transform: scale(1.4) translateY(125%) translateZ(0);
+    transition: all $transition-duraction ease;
+  }
+  &__blobs span:nth-child(1) {
+    left: -5%;
+  }
+  &__blobs span:nth-child(2) {
+    left: 30%;
+    transition-delay: 60ms;
+  }
+  &__blobs span:nth-child(3) {
+    left: 66%;
+    transition-delay: 25ms;
+  }
+  @include hover {
+    color: #fff;
+  }
+  @include hover-pseudo(" .waves__blobs span") {
+    transform: scale(1.5) translateY(0) translateZ(0);
+  }
 }

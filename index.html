@@ -3,13 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TITLE</title>
-    <!-- <link rel="shortcut icon" href="" type="image/x-icon" /> -->
+    <title>Beans</title>
+    <link
+      rel="shortcut icon"
+      href="./images/icons/favicon.ico"
+      type="image/x-icon"
+    />
 
     <!-- ПЕРЕДЗАВАНТАЖЕННЯ КАРТИНОК -->
     <!-- <link rel="preload" as="image" href="" media="(max-width: 766px)" />
     <link rel="preload" as="image" href="" media="(min-width: 767px)" /> -->
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/css/styles.min.css" />
   </head>
   <body class="page right-fix-padding">
@@ -62,7 +78,51 @@
       <main class="main">
         <section class="main__section hero">
           <div class="hero__container">
-            <div class="hero__content"></div>
+            <div class="hero__content">
+              <button class="button waves">
+                <span>Explore more</span>
+                <div class="waves__blobs">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </button>
+              <a href="#" class="link neon-underline"
+                ><span>Explore more</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="subscribe">
+          <div class="subscribe__container">
+            <form
+              action="/submit"
+              method="post"
+              id="registrationForm"
+              name="registrationForm"
+              enctype="multipart/form-data"
+              autocomplete="on"
+              accept-charset="UTF-8"
+              novalidate
+              class="form"
+            >
+              <div class="form__elem">
+                <label for="email">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="example@mail.com"
+                  required
+                  autocomplete="email"
+                  inputmode="email"
+                />
+              </div>
+              <div class="form__elem">
+                <button type="submit" class="form__submit">Subscribe</button>
+              </div>
+            </form>
           </div>
         </section>
       </main>

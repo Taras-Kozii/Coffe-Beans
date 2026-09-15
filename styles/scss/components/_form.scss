@@ -1,0 +1,76 @@
+.form-elem {
+  position: relative;
+
+  input {
+    --p-block: 10px;
+    --p-inline: 1rem;
+    --color: #000;
+    --font-size: 1rem;
+    --max-width: 240px;
+
+    max-width: var(--max-width);
+    display: block;
+    padding-inline: var(--p-inline);
+    padding-block: var(--p-block);
+    font-size: var(--font-size);
+    color: var(--color);
+    border: none;
+    transition-duration: $transition-duraction;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+//============================================
+// INPUTS
+.shadow-rotate {
+  --bg-color: rgba(219, 161, 219, 0.8);
+  --radius: 10px;
+  --color: #222;
+
+  background-color: var(--bg-color);
+  border-radius: var(--radius);
+  color: var(--color);
+
+  &:focus {
+    animation: rotateShadow 2s infinite linear;
+  }
+}
+@keyframes rotateShadow {
+  0% {
+    box-shadow:
+      -2px -2px 8px 1px #d4b1e5,
+      2px 2px 8px 1px #958db0;
+  }
+  25% {
+    box-shadow:
+      -2px 2px 8px 1px #d4b1e5,
+      2px -2px 8px 1px #958db0;
+  }
+  50% {
+    box-shadow:
+      2px 2px 8px 1px #d4b1e5,
+      -2px -2px 8px 1px #958db0;
+  }
+  75% {
+    box-shadow:
+      2px -2px 8px 1px #d4b1e5,
+      -2px 2px 8px 1px #958db0;
+  }
+  100% {
+    box-shadow:
+      -2px -2px 8px 1px #d4b1e5,
+      2px 2px 8px 1px #958db0;
+  }
+}
+
+// <div class="form-elem">
+//               <input
+//                 placeholder="type it"
+//                 class="input shadow-rotate"
+//                 name="text"
+//                 type="text"
+//               />
+//             </div>

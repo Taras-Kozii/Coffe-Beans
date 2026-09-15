@@ -1,1 +1,61 @@
 @use "../utiles/index" as *;
+
+.link {
+  --color: #222;
+
+  position: relative;
+  top: 0;
+  left: 0;
+  min-width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color);
+
+  font-family: "Poppins", sans-serif;
+  white-space: nowrap;
+  text-transform: uppercase;
+  @include adaptive-property(font-size, 1, 0, 1.5, rem);
+}
+//*******UNDERLINE********************************************************************
+//неонове підкреслення
+.neon-underline {
+  --before-height: 2px;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: $transition-duraction;
+  transition-property: color;
+  &::before,
+  &::after {
+    content: "";
+    pointer-events: none;
+    left: 0px;
+    bottom: -4px;
+    position: absolute;
+    width: 0%;
+    height: var(--before-height);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 500ms;
+    transition-property: width, left;
+  }
+  &::after {
+    background-color: #bc9835e1;
+  }
+  &::before {
+    background-color: #0f0;
+    filter: blur(5px);
+  }
+  @include hover {
+    transition-duration: $transition-duraction;
+    background: linear-gradient(0, #0f0, #000 70%, #000 99%);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  @include hover-pseudo("::after") {
+    width: 100%;
+    left: 0px;
+  }
+  @include hover-pseudo("::before") {
+    width: 100%;
+    left: 0px;
+  }
+}
