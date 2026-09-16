@@ -1,11 +1,15 @@
 @use "../utiles/index" as *;
 
 .logo {
-  @include adaptive-property(width, 70, 0, 135);
-  @include adaptive-property(height, 23, 0, 46);
+  flex-shrink: 0;
+  display: block;
   @include ibg(contain);
 }
-.logo--footer {
+.header--logo {
+  height: 46px;
+  @include adaptive-property(width, 70, 0, 135);
+}
+.footer--logo {
+  height: 71px;
   @include adaptive-property(width, 102, 0, 207);
-  @include adaptive-property(height, 32, 0, 71);
 }

@@ -65,3 +65,8 @@
     transform: scale(1.5) translateY(0) translateZ(0);
   }
 }
+
+.waves--white {
+  background-color: transparent;
+  color: $text-color-white;
+}

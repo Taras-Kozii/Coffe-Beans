@@ -42,14 +42,14 @@
       align-items: center;
       flex-wrap: wrap;
       row-gap: 1.5rem;
-      @include adaptive-property(column-gap, 32, 0, 64);
+      @include adaptive-property(column-gap, 30, 0, 60);
     }
   }
   &__link {
     display: inline-block;
-    font-weight: 400;
+    font-weight: 500;
     color: $text-color-white;
-    @include adaptive-property(font-size, 1.5, 0, 1.25, rem);
+    @include adaptive-property(font-size, 1.5, 0, 0.875, rem);
   }
 }
 

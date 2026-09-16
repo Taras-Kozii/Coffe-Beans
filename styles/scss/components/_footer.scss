@@ -1,1 +1,67 @@
 @use "../utiles/index" as *;
+
+.footer {
+  background-color: $text-color-olive;
+  position: relative;
+  @include adaptive-property(padding-top, 30, 0, 80);
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+    p,
+    a,
+    h3,
+    h4 {
+      color: $text-color-white;
+    }
+
+    @include adaptive-property(
+      padding-block,
+      calc($section-block-padding / 3),
+      0,
+      80
+    );
+  }
+  &__logo-block {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.625rem;
+
+    p {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 157.142857%; /* 22px/14 */
+    }
+  }
+}
+.footer-links {
+  max-width: 332px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__title {
+    font-weight: bold;
+    margin-bottom: 0.625rem;
+    @include adaptive-property(font-size, 1.125, 0, 1.625, rem);
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    @include adaptive-property(row-gap, 0.625, 0, 1.375, rem);
+  }
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  @include adaptive-property(column-gap, 10, 0, 22);
+}
