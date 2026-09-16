@@ -48,7 +48,7 @@
   &__link {
     display: inline-block;
     font-weight: 400;
-    color: $text-color-main;
+    color: $text-color-white;
     @include adaptive-property(font-size, 1.5, 0, 1.25, rem);
   }
 }

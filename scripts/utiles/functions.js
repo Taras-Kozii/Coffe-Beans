@@ -1,6 +1,6 @@
 'use strict';
 
-import { page } from "./vars.js";
+import { page, header } from "./vars.js";
 
 export function getScrollValue(link) {
   const block = document.querySelector(link.dataset.goto);

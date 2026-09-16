@@ -12,10 +12,9 @@
   justify-content: center;
   text-align: center;
 
-  border: 2px solid $bg-color-yellow;
   outline: none;
   cursor: pointer;
-  border-radius: $radius;
+  border-radius: $button-radius;
   padding: 0.875rem;
   transition-duration: $transition-duraction;
   color: $text-color-dark;
@@ -37,6 +36,7 @@
     bottom: -3px;
     right: -1px;
     z-index: -1;
+    border-radius: $button-radius;
   }
   &__blobs span {
     background-color: $text-color-olive;

@@ -1,0 +1,10 @@
+@use "../utiles/index" as *;
+
+.section-title {
+  font-weight: 700;
+  color: $text-color-olive;
+  @include adaptive-property(font-size, 1.625, 0, 3.375, rem);
+}
+.section-title--white {
+  color: $text-color-white;
+}

@@ -4,7 +4,7 @@
 $menu-size: 40px;
 $line-height: 3px;
 $gap: $line-height * 5;
-$bg-color: #000;
+$bg-color: $bg-color-yellow;
 $radius: 0;
 
 %menu-dash {
@@ -234,109 +234,6 @@ $radius: 0;
       margin-top: 0;
       opacity: 0;
       transition-delay: 0s, 0.25s;
-    }
-  }
-}
-
-// Стрілка вправо
-//=============================================
-.arrow-right {
-  &:before,
-  &:after {
-    display: none;
-  }
-
-  span {
-    transition: 0.25s ease;
-
-    &:before,
-    &:after {
-      @extend %menu-dash;
-      content: "";
-      top: 0;
-      left: 0;
-      transition: inherit;
-      margin: 0;
-    }
-
-    &:before {
-      transform: translateY(-$gap);
-    }
-
-    &:after {
-      transform: translateY($gap);
-    }
-  }
-
-  &.active {
-    span {
-      transform: rotate(180deg);
-
-      &:before,
-      &:after {
-        width: calc($menu-size / 2);
-        left: $menu-size / 100 * 2;
-      }
-
-      &:before {
-        transform: rotate(-45deg) translateY(-(calc($menu-size / 100) * 22));
-      }
-
-      &:after {
-        transform: rotate(45deg) translateY(calc($menu-size / 100) * 22);
-      }
-    }
-  }
-}
-
-// Стрілка вліво
-//=============================================
-.arrow-left {
-  &:before,
-  &:after {
-    display: none;
-  }
-
-  span {
-    transition: 0.25s ease;
-
-    &:before,
-    &:after {
-      @extend %menu-dash;
-      content: "";
-      top: 0;
-      right: 0;
-      left: auto;
-      transition: inherit;
-      margin: 0;
-    }
-
-    &:before {
-      transform: translateY(-$gap);
-    }
-
-    &:after {
-      transform: translateY($gap);
-    }
-  }
-
-  &.active {
-    span {
-      transform: rotate(-180deg);
-
-      &:before,
-      &:after {
-        width: calc($menu-size / 2);
-        right: calc($menu-size / 100) * 2;
-      }
-
-      &:before {
-        transform: rotate(-45deg) translateY(calc($menu-size / 100) * 22);
-      }
-
-      &:after {
-        transform: rotate(45deg) translateY(-(calc($menu-size / 100) * 22));
-      }
     }
   }
 }

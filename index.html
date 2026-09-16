@@ -9,10 +9,7 @@
       href="./images/icons/favicon.ico"
       type="image/x-icon"
     />
-
-    <!-- ПЕРЕДЗАВАНТАЖЕННЯ КАРТИНОК -->
-    <!-- <link rel="preload" as="image" href="" media="(max-width: 766px)" />
-    <link rel="preload" as="image" href="" media="(min-width: 767px)" /> -->
+    <link rel="preload" as="image" href="./images/hero/coffee_image.webp" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,13 +30,12 @@
       <header class="header">
         <div class="header__container">
           <div class="header__content">
-            <a href="index.html" class="logo header__logo">
+            <a href="index.html" class="logo header__logo" aria-label="logo">
               <img
-                src=""
-                alt="cookie-logo"
-                width="180"
-                height="52"
-                loading="lazy"
+                src="./images/icons/logo.svg"
+                alt="bean-logo"
+                width="135"
+                height="46"
                 decoding="async"
               />
             </a>
@@ -48,23 +44,34 @@
                 <ul class="menu__list">
                   <li class="menu__item">
                     <a
-                      href="#cookies"
-                      class="menu__link link"
-                      data-goto="#cookies"
-                      ><span>Cookies</span></a
+                      href="#home"
+                      class="menu__link link neon-underline"
+                      data-goto="#home"
+                      ><span>Home</span></a
                     >
                   </li>
                   <li class="menu__item">
                     <a
-                      href="index.html#locations"
-                      class="menu__link link"
-                      data-goto="#locations"
-                      ><span>Locations</span></a
+                      href="index.html#products"
+                      class="menu__link link neon-underline"
+                      data-goto="#products"
+                      ><span>Menu</span></a
                     >
                   </li>
                   <li class="menu__item">
-                    <a href="about.html" class="menu__link link"
-                      ><span>About</span></a
+                    <a
+                      href="index.html#about"
+                      class="menu__link link neon-underline"
+                      data-goto="#about"
+                      ><span>About Us</span></a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a
+                      href="index.html#contact"
+                      class="menu__link link neon-underline"
+                      data-goto="#contact"
+                      ><span>Contact Us</span></a
                     >
                   </li>
                 </ul>
@@ -76,25 +83,153 @@
       </header>
 
       <main class="main">
-        <section class="main__section hero">
+        <section class="main__section hero" id="home">
+          <div class="hero__img">
+            <img src="./images/hero/coffee_image.webp" alt="cap-of-coffee" />
+          </div>
           <div class="hero__container">
-            <div class="hero__content">
-              <button class="button waves">
-                <span>Explore more</span>
-                <div class="waves__blobs">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
+            <div class="hero__content"></div>
+          </div>
+        </section>
+        <section class="discover" id="discover">
+          <div class="discover__container">
+            <button class="button waves">
+              <span>Explore more </span>
+              <div class="waves__blobs">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+            <a href="#" class="link neon-underline"><span>Explore </span> </a>
+          </div>
+        </section>
+        <section class="products" id="products">
+          <div class="products__container"></div>
+        </section>
+        <section class="about" id="about">
+          <div class="about__container"></div>
+        </section>
+        <section class="get">
+          <div class="get__container"></div>
+        </section>
+        <section class="feedback">
+          <div class="feedback__container">
+            <div class="custom__slider">
+              <div class="swiper custom-slider">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide custom-slider__item custom-slide">
+                    <div class="custom-slide__body">
+                      <div class="custom-slide__img">
+                        <img
+                          src=""
+                          alt="slide-1-img"
+                          width="250"
+                          height="250"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      <h3 class="custom-slide__title">Slide 1</h3>
+                      <div class="custom-slide__text">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Hic quas non, temporibus atque officia quis,
+                          magni, quia qui eius iure maiores quo corporis?
+                          Reiciendis cumque consequuntur blanditiis eveniet a
+                          aliquid.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide custom-slider__item custom-slide">
+                    <div class="custom-slide__body">
+                      <div class="custom-slide__img">
+                        <img
+                          src=""
+                          alt="slide-1-img"
+                          width="250"
+                          height="250"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      <h3 class="custom-slide__title">Slide 2</h3>
+                      <div class="custom-slide__text">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Hic quas non, temporibus atque officia quis,
+                          magni, quia qui eius iure maiores quo corporis?
+                          Reiciendis cumque consequuntur blanditiis eveniet a
+                          aliquid.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide custom-slider__item custom-slide">
+                    <div class="custom-slide__body">
+                      <div class="custom-slide__img">
+                        <img
+                          src="./img/img-3-s.webp"
+                          alt="slide-1-img"
+                          width="250"
+                          height="250"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      <h3 class="custom-slide__title">Slide 3</h3>
+                      <div class="custom-slide__text">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Hic quas non, temporibus atque officia quis,
+                          magni, quia qui eius iure maiores quo corporis?
+                          Reiciendis cumque consequuntur blanditiis eveniet a
+                          aliquid.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide custom-slider__item custom-slide">
+                    <div class="custom-slide__body">
+                      <div class="custom-slide__img">
+                        <img
+                          src="./img/img-3-s.webp"
+                          alt="slide-1-img"
+                          width="250"
+                          height="250"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      <h3 class="custom-slide__title">Slide 4</h3>
+                      <div class="custom-slide__text">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Hic quas non, temporibus atque officia quis,
+                          magni, quia qui eius iure maiores quo corporis?
+                          Reiciendis cumque consequuntur blanditiis eveniet a
+                          aliquid.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </button>
-              <a href="#" class="link neon-underline"
-                ><span>Explore more</span>
-              </a>
+              </div>
+              <div class="custom-slider-button custom-slider-prev">
+                <img src="./img/arow.svg" alt="arrow-prev" />
+              </div>
+              <div class="custom-slider-button custom-slider-next">
+                <img src="./img/arow.svg" alt="arrow-next" />
+              </div>
+              <div class="custom-pagination"></div>
             </div>
           </div>
         </section>
-        <section class="subscribe">
+        <section class="subscribe" id="contact">
           <div class="subscribe__container">
             <form
               action="/submit"
